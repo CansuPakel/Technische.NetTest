@@ -9,7 +9,7 @@ namespace Data
 
 		public FileReader(string filePath)
 		{
-			if (!File.Exists(filePath)) throw new FileNotFoundException($"File not found: {filePath}");
+			if (!File.Exists(@$"{filePath}")) throw new FileNotFoundException($"File not found: {filePath}");
 			_filePath = filePath;
 		}
 
