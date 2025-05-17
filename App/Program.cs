@@ -22,7 +22,7 @@ try
 	HashSet<WordDTO> wordDTOs = new FileReader(filePath).Words();
 	var result = new WordSearcher(wordDTOs);
 	Dictionary<string, WordDTO> combinations = result.Combinations(lengthWord, maxCombination);
-	Console.WriteLine("Result of 3 combinations");
+	Console.WriteLine($"Result of {maxCombination} combinations");
 	foreach(var combination in combinations)
 	{
 		Console.WriteLine($"{combination.Key}={combination.Value.Word}");
